@@ -42,7 +42,9 @@ function createFloatingHeart() {
     }, 10);
     
     setTimeout(() => {
-        document.body.removeChild(heart);
+        if (heart.parentNode) {
+            document.body.removeChild(heart);
+        }
     }, 2000);
 }
 
